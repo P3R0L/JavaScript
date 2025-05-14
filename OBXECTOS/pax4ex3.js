@@ -1,4 +1,4 @@
-//Crea unha función á que se lle pase unha cadea de números e devolva unha cadea da mesma lonxitude formada por * e as últimas 4 cifras do parámetro de entrada.
+// Crea unha función á que se lle pase unha cadea de números e devolva unha cadea da mesma lonxitude formada por * e as últimas 4 cifras do parámetro de entrada.
 function enmascarar(cadea) {
   let novaCadea = "";
   for (let i = 0; i < cadea.length - 4; i++) {
