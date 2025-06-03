@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue - Páxina 16 - Exercicio 1</title>
+    <script type="module" src="pax16ex1.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <p>Nome: {{ nome }}</p>
+      <p>Ano: {{ ano }}</p>
+      <p>Ano + 5: {{ ano + 5 }}</p>
+      <p>Imaxe:</p>
+      <img :src="imaxe" alt="Imaxe de proba" />
+      <br />
+      <br />
+      <input v-model="nome" />
+      <p>Contador: {{ contador }}</p>
+      <button @click="incrementar">Incrementar contador</button>
+      <button @click="decrementar">Decrementar contador</button>
+    </div>
+  </body>
+</html>
