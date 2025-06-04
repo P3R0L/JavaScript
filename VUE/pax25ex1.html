@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue - Páxina 25 - Exercicio 1</title>
+    <script type="module" src="pax25ex1.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" v-model="textoInput" />
+      <p>{{ textoInput || "Parágrafo baleiro" }}</p>
+      <hr />
+      <textarea v-model="textoTextArea"></textarea>
+      <p>{{ textoTextArea || "Parágrafo baleiro" }}</p>
+      <hr />
+      <input type="checkbox" v-model="checkedCheckboxes" value="checkbox1" />
+      <label>checkbox1</label><br />
+      <input type="checkbox" v-model="checkedCheckboxes" value="checkbox2" />
+      <label>checkbox2</label>
+      <p>{{ checkedCheckboxes }}</p>
+      <hr />
+      <input type="radio" v-model="checkedRadioButton" value="button1" />
+      <label>button1</label><br />
+      <input type="radio" v-model="checkedRadioButton" value="button2" />
+      <label>button2</label>
+      <p>{{ checkedRadioButton || "Ningunha opción selecionada" }}</p>
+      <hr />
+      <select v-model="selectedOption">
+        <option disabled value="">Seleciona unha opcion</option>
+        <option>opcionA</option>
+        <option>opcionB</option>
+        <option>opcionC</option>
+      </select>
+      <p>{{ selectedOption }}</p>
+      <hr />
+      <button @click="resetearValores">RESET</button>
+    </div>
+  </body>
+</html>
