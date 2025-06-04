@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue - Páxina 21 - Exercicio 1</title>
+    <script type="module" src="pax21ex1.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <button @click.middle="mensaxePorConsola">CLICK</button>
+      <hr />
+      <input type="text" @keyup="actualizarParagrafo($event)" />
+      <p>{{ mensaxe }}</p>
+      <hr />
+      <input type="text" @keyup.enter="amosarParagrafo($event)" />
+      <p>{{ texto }}</p>
+    </div>
+  </body>
+</html>
