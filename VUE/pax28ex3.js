@@ -7,18 +7,24 @@ import { createApp } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
 createApp({
   data() {
     return {
-      num1: 0,
-      num2: 0,
+      metros: "",
+      kilometros: "",
     };
   },
-  computed: {
-    suma() {
-      return this.num1 + this.num2;
+  watch: {
+    metros() {
+      return this.calcularKilometros();
     },
-    isPar() {
-      return this.suma % 2 == 0
-        ? "A suma da como resultado par"
-        : "A suma da como resultado impar";
+    kilometros() {
+      return this.calcularMetros();
+    },
+  },
+  methods: {
+    calcularKilometros() {
+      this.kilometros = this.metros / 1000;
+    },
+    calcularMetros() {
+      this.metros = this.kilometros * 1000;
     },
   },
 }).mount("#app");
