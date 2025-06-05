@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue - Páxina 33 - Exercicio 3</title>
+    <script type="module" src="pax33ex3.js"></script>
+    <style>
+      .claseA {
+        color: green;
+        background-color: red;
+      }
+      .claseB {
+        color: purple;
+        background-color: yellow;
+      }
+      .hidden {
+        display: none;
+      }
+      .visible {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" v-model="clase" />
+      <p :class="[clase, {hidden: isHidden, visible: isVisible}]">Parágrafo</p>
+      <button @click="cambiarVisibilidade()">{{textoBoton}}</button>
+      <hr />
+      <input type="text" @input="cambiarCor($event)" />
+      <p :style="cor">Parágrafo 2</p>
+    </div>
+  </body>
+</html>
