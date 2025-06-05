@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue - Páxina 33 - Exercicio 2</title>
+    <script type="module" src="pax33ex2.js"></script>
+    <style>
+      .activa {
+        background-color: blue;
+        border: 2px solid orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <table>
+        <tr>
+          <td :class="{activa: estados[0]}" @click="cambiarEstados()">
+            Celda 1
+          </td>
+          <td :class="{activa: estados[1]}" @click="cambiarEstados()">
+            Celda 2
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
