@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue - Páxina 35 - Exercicio 2</title>
+    <script type="module" src="pax35ex2.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <template v-if="haiTarefas">
+        <ul v-for="tarefa in tarefas">
+          <li>{{ tarefa }}</li>
+        </ul>
+      </template>
+      <p v-else>Non hai tarefas pendentes</p>
+    </div>
+  </body>
+</html>
