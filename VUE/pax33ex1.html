@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue - Páxina 33 - Exercicio 1</title>
+    <script type="module" src="pax33ex1.js"></script>
+    <style>
+      .blue {
+        color: blue;
+      }
+      .green {
+        color: green;
+      }
+      .red {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <p :class="{blue: isBlue}" @click="cambiarEstado()">Parágrafo 1</p>
+      <p :class="{green: isGreen, red: isRed}" @click="cambiarCor()">
+        Parágrafo 2
+      </p>
+    </div>
+  </body>
+</html>
