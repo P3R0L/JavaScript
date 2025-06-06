@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue - Páxina 38 - Exercicio 3</title>
+    <script type="module" src="pax38ex3.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <input
+        type="text"
+        v-model="novoAlimento"
+        placeholder="Alimento a engadir"
+      />
+      <button @click="engadirAlimento()">Engadir</button>
+      <hr />
+      <template v-if="visible">
+        <ul v-for="alimento in alimentos" :key="alimento.id">
+          <li>
+            {{ alimento.nome }}
+            <button @click="eliminarAlimento(alimento.id)">X</button>
+          </li>
+        </ul>
+      </template>
+      <hr />
+      <button @click="toggle()">{{ textoBoton }}</button>
+    </div>
+  </body>
+</html>
