@@ -25,19 +25,20 @@ export default {
   methods: {
     alternarFavorito(i) {
       this.persoas[i].favorito = !this.persoas[i].favorito;
+      console.log(this.persoas[i].favorito);
     },
   },
 };
 </script>
 
 <template>
-  <Contact v-bind="persoas[0]" @alternar-favorito="alternarFavorito(0)" />
+  <Contact v-bind="persoas[0]" @alternar-favorito="() => alternarFavorito(0)" />
   <Contact
     :nome="persoas[1].nome"
     :tlf="persoas[1].tlf"
     :correo="persoas[1].correo"
     :favorito="persoas[1].favorito"
-    @alternar-favorito="alternarFavorito(1)"
+    @alternar-favorito="() => alternarFavorito(1)"
   />
 </template>
 
